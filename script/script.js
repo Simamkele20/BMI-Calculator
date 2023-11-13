@@ -3,6 +3,7 @@ var weightInput = document.querySelector(".weight");
 var calculateButton = document.querySelector(".calculate");
 var result = document.querySelector(".result");
 var statement = document.querySelector(".result-statement");
+document.getElementById("reset").onclick = reset;
 var BMI, height, weight;
 
 calculateButton.addEventListener("click", ()=>{
@@ -24,3 +25,10 @@ calculateButton.addEventListener("click", ()=>{
         statement.innerText = "Your BMI falls within the severe obese range";
     }
 });
+
+function reset() {
+    document.querySelector(".height").value = " ";
+    document.querySelector(".weight").value = " "; 
+    statement.innerText = "";
+    result.textContent = ""
+  }
